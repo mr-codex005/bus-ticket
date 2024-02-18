@@ -220,9 +220,9 @@
     </div>
 
     <!-- seats and buy ticket section started -->
-    <div class="max-w-screen-xl mx-auto p-8">
+    <div class="max-w-screen-xl mx-auto p-8 bg-white mt-7 rounded-3xl flex">
       <!-- seats section -->
-      <div>
+      <div class="w-[60%] pr-9 border-r-2 border-dashed">
         <h2 class="font-semibold text-2xl pb-6">Select Your Seat</h2>
         <div class="flex justify-between  py-6 border-y-2 border-dashed">
           <section class="flex items-center gap-1">
@@ -386,7 +386,65 @@
       </div>
 
       <!-- buy seats section -->
-      <div></div>
+      <div class="pl-9 w-[40%]">
+        <h2 class="font-semibold text-2xl pb-6 border-b-2 border-dashed">Select Your Seat</h2>
+        <div class="bg-[#F7F8F8] p-8 mt-6 rounded-xl">
+          <section class="flex justify-between pb-4 border-b-2 border-dashed">
+            <h4 class="text-base font-medium">Seat<span id="count-seat">2</span></h4>
+            <h4 class="text-base font-medium">Class</h4>
+            <h4 class="text-base font-medium">Price</h4>
+          </section>
+          <div id="my-tickets" class="border-b-2">
+            <section class="flex justify-between my-3">
+              <h4 class="text-base text-[#03071299] font-normal">A1</h4>
+              <h4 class="text-base text-[#03071299] font-normal">Economy</h4>
+              <h4 class="text-base text-[#03071299] font-normal">550</h4>
+            </section>
+            <section class="flex justify-between mb-3">
+              <h4 class="text-base text-[#03071299] font-normal">B4</h4>
+              <h4 class="text-base text-[#03071299] font-normal">Economy</h4>
+              <h4 class="text-base text-[#03071299] font-normal">550</h4>
+            </section>
+          </div>
+          <div class="flex justify-between">
+            <h4 class="text-base font-medium">Total Price</h4>
+            <h4 class="text-base font-medium">BDT <span id="gross-price">1000</span></h4>
+          </div>
+          <div class="flex justify-between rounded-xl bg-white mt-3 p-2">
+            <input type="text" name="" id="" class="p-3 rounded-xl border-none outline-none"
+              placeholder="Have any coupon?">
+            <button class="btn bg-[#1DD100] text-white text-base font-semibold">Apply</button>
+          </div>
+          <div class="flex justify-between mt-6">
+            <h4 class="text-base font-medium">Grand Total</h4>
+            <h4 class="text-base font-medium">BDT <span id="net-price">1000</span></h4>
+          </div>
+        </div>
+
+        <!-- input field -->
+        <form action="">
+          <label for="user-name">
+            <h3 class="font-semibold mt-6">Passenger Name</h3>
+            <input type="text" placeholder="Enter Your Name" name="user-name" id="user-name"
+              class="w-full border-2 p-3 rounded-xl mt-4">
+          </label>
+          <label for="user-name">
+            <h3 class="font-semibold mt-6">Phone Number</h3>
+            <input type="tel" placeholder="Enter Your Name" name="user-name" id="user-name"
+              class="w-full border-2 p-3 rounded-xl mt-4">
+          </label>
+          <label for="user-name">
+            <h3 class="font-semibold mt-6">Email Id</h3>
+            <input type="email" placeholder="Enter Your Name" name="user-name" id="user-name"
+              class="w-full border-2 p-3 rounded-xl mt-4">
+          </label>
+          <button class="btn w-full h-16 bg-[#1DD100] text-white text-xl font-extrabold mt-6">Next</button>
+          <div class="flex justify-center gap-10">
+            <a class="text-base text-[#03071299] font-normal underline" href="">Terms and condition</a>
+            <a class="text-base text-[#03071299] font-normal underline" href="">Cancellation policy</a>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </body>
