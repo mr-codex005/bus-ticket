@@ -31,13 +31,13 @@
 <body>
 
   <!-- the header section started -->
-  <header class="max-w-screen-xl mx-auto raleway pt-16">
+  <header class="max-w-screen-xl mx-auto raleway pt-16 pb-8">
     <div class="navbar bg-base-100">
       <div class="navbar-start">
         <a class="font-extrabold text-4xl">P-Ticket</a>
       </div>
-      <div class="navbar-center flex">
-        <ul class="menu menu-horizontal px-1">
+      <div class="navbar-center">
+        <ul class="menu menu-horizontal px-1 flex gap-14">
           <li><a class="text-[#030712B3] font-medium text-lg">Home</a></li>
           <li><a class="text-[#030712B3] font-medium text-lg">About</a></li>
           <li><a class="text-[#030712B3] font-medium text-lg">Destination</a></li>
@@ -55,9 +55,8 @@
 
 
   <!-- hero section started -->
-  <div class="hero max-w-screen-xl mx-auto" style="background-image: url(./images/banner.png);">
-    <!-- <div class="hero-overlay bg-opacity-60"></div> -->
-    <div class="hero-content text-center text-neutral-content pt-[70px] pb-[135px]">
+  <div class="hero max-w-screen-xl mx-auto rounded-3xl relative" style="background-image: url(./images/banner.png);">
+    <div class="hero-content text-center text-neutral-content pt-[70px] pb-[140px]">
       <div class="max-w-3xl">
         <h1 class="mb-5 text-6xl  font-extrabold raleway text-white">
           End-to-End Travel with
@@ -73,6 +72,40 @@
           streamlined .
         </p>
         <button class="text-xl text-black font-bold px-8 py-5 bg-[#1DD100] rounded-xl">Get Started</button>
+      </div>
+    </div>
+
+    <!-- essentials -->
+    <div class="flex gap-6 absolute bottom-[-12%]">
+      <!-- card 1 -->
+      <div class="card bg-white rounded-3xl flex flex-row p-8 pr-14 gap-4 border-b-4 border-[#1DD100]">
+        <div class="border-2 border-dashed border-[#03071270]">
+          <img src="./images/people.png" alt="">
+        </div>
+        <div>
+          <h2 class="font-bold text-4xl">500K+</h2>
+          <h4 class="font-normal text-lg text-[#03071299]">Registered users</h4>
+        </div>
+      </div>
+      <!-- card 2 -->
+      <div class="card bg-white rounded-3xl flex flex-row p-8 pr-14 gap-4 border-b-4 border-[#1DD100]">
+        <div class="border-2 border-dashed border-[#03071270]">
+          <img src="./images/people.png" alt="">
+        </div>
+        <div>
+          <h2 class="font-bold text-4xl">500K+</h2>
+          <h4 class="font-normal text-lg text-[#03071299]">Registered users</h4>
+        </div>
+      </div>
+      <!-- card 3 -->
+      <div class="card bg-white rounded-3xl flex flex-row p-8 pr-14 gap-4 border-b-4 border-[#1DD100]">
+        <div class="border-2 border-dashed border-[#03071270]">
+          <img src="./images/people.png" alt="">
+        </div>
+        <div>
+          <h2 class="font-bold text-4xl">500K+</h2>
+          <h4 class="font-normal text-lg text-[#03071299]">Registered users</h4>
+        </div>
       </div>
     </div>
   </div>
