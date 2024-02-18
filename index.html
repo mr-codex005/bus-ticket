@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bus ticket</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- raleway font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <style>
+    .inter {
+      font-family: "Inter", sans-serif;
+    }
+
+    .raleway {
+      font-family: "Raleway", sans-serif;
+    }
+  </style>
 </head>
+
 <body>
-  
+
+  <!-- the header section started -->
+  <header class="max-w-screen-xl mx-auto raleway">
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <a class="font-extrabold text-4xl">P-Ticket</a>
+      </div>
+      <div class="navbar-center flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a class="text-[#030712B3] font-medium text-lg">Home</a></li>
+          <li><a class="text-[#030712B3] font-medium text-lg">About</a></li>
+          <li><a class="text-[#030712B3] font-medium text-lg">Destination</a></li>
+          <li><a class="text-[#030712B3] font-medium text-lg">Search</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <button class="flex gap-2.5 px-7 py-4 rounded-xl bg-[#1DD1001A] items-center">
+          <span class="text-[#1DD100] font-bold text-xl">Bus</span>
+          <img src="./images/bus-icon.png" alt="">
+        </button>
+      </div>
+    </div>
+  </header>
 </body>
+
 </html>
