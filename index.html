@@ -179,7 +179,7 @@
           <!-- available sit -->
           <div class="bg-[#1DD10026] flex items-center p-4 rounded-xl">
             <img src="./images/seat-green.png" alt="">
-            <p class="text-[#1DD100] text-lg font-medium">Selected</p>
+            <p class="text-[#1DD100] text-lg font-medium"><span id="avialable">40</span> seats left</p>
           </div>
         </div>
 
@@ -213,6 +213,64 @@
           <p class="text-[#03071299] text-2xl font-semibold">Per seat</p>
         </div>
       </section>
+    </div>
+
+    <!-- seats and buy ticket section started -->
+    <div class="max-w-screen-xl mx-auto p-8">
+      <!-- seats section -->
+      <div>
+        <h2 class="font-semibold text-2xl pb-6">Select Your Seat</h2>
+        <div class="flex justify-between  py-6 border-y-2 border-dashed">
+          <section class="flex items-center gap-1">
+            <img class="border-2 border-dashed" src="./images/seat-gray.png" alt="">
+            <p class="text-lg  text-[#03071280] font-medium">Available</p>
+          </section>
+          <section class="flex items-center gap-1">
+            <img class="border-2 border-dashed" src="./images/seat-green-filled.png" alt="">
+            <p class="text-lg text-[#1DD100] font-medium">Selected</p>
+          </section>
+        </div>
+
+        <!-- seats -->
+        <section>
+          <div class="flex justify-end">
+            <div class="bg-[#0307121A]  w-28 h-14 flex justify-center items-center rounded-xl my-6 ">
+              <img style="width: 20px;" src="./images/steering-wheel-svgrepo-com.svg" alt="">
+            </div>
+          </div>
+          <!-- a  -->
+          <section>
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center gap-8">
+                <button class="text-[#03071280] text-lg font-medium">A</button>
+                <button class="btn btn-active px-10 text-[#03071280] text-lg font-medium">A1</button>
+                <button class="btn btn-active px-10 text-[#03071280] text-lg font-medium">A2</button>
+              </div>
+              <div class="flex items-center gap-8">
+                <button class="btn btn-active px-10 text-[#03071280] text-lg font-medium">A3</button>
+                <button class="btn btn-active px-10 text-[#03071280] text-lg font-medium">A4</button>
+              </div>
+            </div>
+          </section>
+          <!-- b -->
+          <section>
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center gap-8">
+                <button class="text-[#03071280] text-lg font-medium">B</button>
+                <button class="btn btn-active px-10 text-[#03071280] text-lg font-medium">B1</button>
+                <button class="btn btn-active px-10 text-[#03071280] text-lg font-medium">B2</button>
+              </div>
+              <div class="flex items-center gap-8">
+                <button class="btn btn-active px-10 text-[#03071280] text-lg font-medium">B3</button>
+                <button class="btn btn-active px-10 text-[#03071280] text-lg font-medium">B4</button>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+
+      <!-- buy seats section -->
+      <div></div>
     </div>
   </div>
 </body>
