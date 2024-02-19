@@ -26,6 +26,10 @@
       font-family: "Raleway", sans-serif;
     }
 
+    .btn:hover {
+      background: green;
+    }
+
     .selected {
       background-color: #1DD100;
     }
@@ -75,7 +79,8 @@
           features allow for a
           streamlined .
         </p>
-        <a href="#buy-ticket"><button class="text-xl text-black font-bold px-8 py-5 bg-[#1DD100] rounded-xl">Get Started</button></a>
+        <a href="#buy-ticket"><button class="text-xl text-black font-bold px-8 py-5 bg-[#1DD100] rounded-xl">Get
+            Started</button></a>
       </div>
     </div>
 
@@ -155,7 +160,7 @@
   </div>
 
   <!-- ticket buying section -->
-  <div id="buy-ticket" class="bg-[#F7F8F8] border-t-2 border-[#1DD100] rounded-t-[88px]  mt-28">
+  <div id="buy-ticket" class="bg-[#F7F8F8] border-t-2 border-[#1DD100] rounded-t-[88px]  mt-28 pb-32 ">
     <!-- select destination section -->
     <div class="max-w-screen-xl mx-auto pt-28">
       <h2 class=" text-center text-4xl font-bold">P.H Paribahan</h2>
@@ -183,7 +188,7 @@
           <!-- available sit -->
           <div class="bg-[#1DD10026] flex items-center p-4 rounded-xl">
             <img src="./images/seat-green.png" alt="">
-            <p class="text-[#1DD100] text-lg font-medium"><span id="avialable">40</span> seats left</p>
+            <p class="text-[#1DD100] text-lg font-medium"><span id="avialable-seats">40</span> seats left</p>
           </div>
         </div>
 
@@ -358,7 +363,7 @@
           <section>
             <div class="flex items-center justify-between mb-6">
               <div class="flex items-center gap-8">
-                <button class="text-[#03071280] text-lg font-medium">B</button>
+                <button class="text-[#03071280] text-lg font-medium">I</button>
                 <button id="i1" class="btn btn-active w-28 h-14 text-[#03071280] text-lg font-medium">I1</button>
                 <button id="i2" class="btn btn-active w-28 h-14 text-[#03071280] text-lg font-medium">I2</button>
               </div>
@@ -395,16 +400,13 @@
             <h4 class="text-base font-medium">Price</h4>
           </section>
           <div id="my-tickets" class="border-b-2">
-            <section class="flex justify-between my-3">
-              <h4 class="text-base text-[#03071299] font-normal">A1</h4>
-              <h4 class="text-base text-[#03071299] font-normal">Economy</h4>
-              <h4 class="text-base text-[#03071299] font-normal">550</h4>
-            </section>
-            <section class="flex justify-between mb-3">
-              <h4 class="text-base text-[#03071299] font-normal">B4</h4>
-              <h4 class="text-base text-[#03071299] font-normal">Economy</h4>
-              <h4 class="text-base text-[#03071299] font-normal">550</h4>
-            </section>
+            <!-- <div>
+              <section class="flex justify-between my-3">
+                <h4 class="text-base text-[#03071299] font-normal">A1</h4>
+                <h4 class="text-base text-[#03071299] font-normal">Economy</h4>
+                <h4 class="text-base text-[#03071299] font-normal">550</h4>
+              </section>
+            </div> -->
           </div>
           <div class="flex justify-between">
             <h4 class="text-base font-medium">Total Price</h4>
@@ -474,6 +476,10 @@
       </div>
     </div>
   </footer>
+
+
+  <!-- javascript files -->
+  <script src="./javascript/main.js"></script>
 </body>
 
 </html>
