@@ -6,7 +6,6 @@ const couponBox = document.getElementById("coupon-box");
 const couponCode = document.getElementById("coupon-code");
 const couponApplyBtn = document.getElementById("coupon-apply-btn");
 const modalBtn = document.getElementById("enable-desable");
-console.log(modalBtn);
 const userPhone = document.getElementById("phone");
 const countSelectedSeats = document.getElementById("count-seat");
 
@@ -56,29 +55,16 @@ function valid() {
       const discountPrice = totalPrice * discount;
       const netPrice = totalPrice - discountPrice;
       netPriceOfTicket.innerText = netPrice;
-    } else if (couponCode.value === "Couple20") {
+    } else if (couponCode.value === "Couple 20") {
       couponBox.classList.add("hidden");
       const discount = 20 / 100;
       const discountPrice = totalPrice * discount;
       const netPrice = totalPrice - discountPrice;
       netPriceOfTicket.innerText = netPrice;
+    }else{
+      alert("Please provide a valid coupon")
     }
   } else {
     alert("You are not able to get discount. To get discount buy 4 ticket");
   }
 }
-
-userPhone.addEventListener("keyup", function (e) {
-  const phoneNumberStringValue = e.target.value.toString();
-
-  console.log(phoneNumberStringValue.length, "phone number length");
-  console.log(parseFloat(countSelectedSeats.innerText), "selected seats");
-  // console.log(modalBtn.attributes);
-  if (
-    phoneNumberStringValue.length < 1 &&
-    parseFloat(countSelectedSeats.innerText) < 1
-  ) {
-    console.log("true  ");
-    modalBtn.style.color = "red";
-  }
-});
