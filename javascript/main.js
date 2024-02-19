@@ -80,6 +80,10 @@ function modalFnc() {
   if (parseFloat(countSelectedSeats.innerText) > 0 && valueLength === 11) {
     my_modal_5.showModal();
   }else{
-    alert("Please select minimum 1 seat and provide your pone number")
+    alert("Please select minimum 1 seat and provide your phone number")
   }
+}
+
+function clearBase (){
+  const seat = document.getElementById
 }
