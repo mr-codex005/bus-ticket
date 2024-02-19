@@ -17,10 +17,6 @@ function seat(elementName) {
 
       // how many seats I have selected
       const selectedSeatsElement = document.getElementsByClassName("selected");
-      if (selectedSeatsElement.length > 4) {
-        alert("You can'n select more then 4 seats");
-        seat.disabled = true;
-      }
 
       const div = document.createElement("div");
       div.innerHTML = `<section class="flex justify-between mb-3">
@@ -33,11 +29,17 @@ function seat(elementName) {
       }
       const countNumberOfSeatBuy = seatsForBuy.children.length;
       // how many seats are available now
-      availableSeats.innerText = mySeat.length - countNumberOfSeatBuy;
+      availableSeats.innerText = mySeat.length - selectedSeatsElement.length;
 
-      countSelectedSeats.innerText = countNumberOfSeatBuy;
-      totalPriceOfTicket.innerText = countNumberOfSeatBuy * ticketPrice;
-      netPriceOfTicket.innerText = countNumberOfSeatBuy * ticketPrice;
+      countSelectedSeats.innerText = selectedSeatsElement.length;
+      totalPriceOfTicket.innerText = selectedSeatsElement.length * ticketPrice;
+      netPriceOfTicket.innerText = selectedSeatsElement.length * ticketPrice;
+
+      if (selectedSeatsElement.length > 4) {
+        alert("You can'n select more then 4 seats");
+        seat.classList.remove("selected");
+        seat.disabled = true;
+      }
     });
   }
 }
@@ -59,8 +61,8 @@ function valid() {
       const discountPrice = totalPrice * discount;
       const netPrice = totalPrice - discountPrice;
       netPriceOfTicket.innerText = netPrice;
-    }else{
-      alert("Please provide a valid coupon")
+    } else {
+      alert("Please provide a valid coupon");
     }
   } else {
     alert("You are not able to get discount. To get discount buy 4 ticket");
