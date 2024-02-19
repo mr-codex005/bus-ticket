@@ -173,7 +173,7 @@
 
     <!-- destination -->
     <div class="bg-white max-w-screen-xl mx-auto p-8 flex rounded-3xl">
-      <section class="w-[70%] pr-20">
+      <section class="w-[75%] pr-20">
         <div class="flex justify-between">
           <div class="flex items-center gap-4">
             <div>
@@ -188,7 +188,7 @@
           <!-- available sit -->
           <div class="bg-[#1DD10026] flex items-center p-4 rounded-xl">
             <img src="./images/seat-green.png" alt="">
-            <p class="text-[#1DD100] text-lg font-medium"><span id="avialable-seats">40</span> seats left</p>
+            <p class="text-[#1DD100] text-lg font-medium"><span id="avialable-seats" class="ml-2">40</span> seats left</p>
           </div>
         </div>
 
@@ -215,7 +215,7 @@
         </div>
       </section>
 
-      <section class=" flex items-center justify-center w-[30%] border-l-2 border-dashed border-[#1DD100]">
+      <section class=" flex items-center justify-center w-[25%] border-l-2 border-dashed border-[#1DD100]">
         <div>
           <img src="./images/fare.png" alt="">
           <h3 class="text-3xl font-bold raleway">550Taka</h3>
@@ -395,7 +395,8 @@
         <h2 class="font-semibold text-2xl pb-6 border-b-2 border-dashed">Select Your Seat</h2>
         <div class="bg-[#F7F8F8] p-8 mt-6 rounded-xl">
           <section class="flex justify-between pb-4 border-b-2 border-dashed">
-            <h4 class="text-base font-medium">Seat<span id="count-seat">2</span></h4>
+            <h4 class="text-base font-medium">Seat <span id="count-seat"
+                class=" bg-green-500 text-white font-bold ml-1 p-1 rounded-xl">0</span></h4>
             <h4 class="text-base font-medium">Class</h4>
             <h4 class="text-base font-medium">Price</h4>
           </section>
@@ -433,7 +434,7 @@
           </label>
           <label for="phone">
             <h3 class="font-semibold mt-6">Phone Number</h3>
-            <input type="number" placeholder="Enter Your Name" name="phone" id="phone"
+            <input type="number" placeholder="Enter Your Name" value="0" name="phone" id="phone"
               class="w-full border-2 p-3 rounded-xl mt-4">
           </label>
           <label for="user-email">
@@ -441,8 +442,8 @@
             <input type="email" placeholder="Enter Your Name" name="user-email" id="user-email"
               class="w-full border-2 p-3 rounded-xl mt-4">
           </label>
-          <button onclick="my_modal_5.showModal()" id="enable-desable"
-            class="btn w-full h-16 bg-[#1DD100] text-white text-xl font-extrabold mt-6">Next</button>
+          <button onclick="my_modal_5.showModal()" id="enable-desable "
+            class="btn w-full h-16 bg-[#1DD100] text-white text-xl font-extrabold mt-6" disabled = "true">Next</button>
           <div class="flex justify-center gap-10">
             <a class="text-base text-[#03071299] font-normal underline" href="">Terms and condition</a>
             <a class="text-base text-[#03071299] font-normal underline" href="">Cancellation policy</a>

@@ -6,7 +6,9 @@ const couponBox = document.getElementById("coupon-box");
 const couponCode = document.getElementById("coupon-code");
 const validatorBtn = document.getElementById("validator-btn");
 const modalBtn = document.getElementById("enable-desable");
+console.log(modalBtn);
 const userPhone = document.getElementById("phone");
+const countSelectedSeats = document.getElementById("count-seat");
 
 const ticketPrice = 550;
 
@@ -21,8 +23,9 @@ function seat(elementName) {
       const selectedSeats = selectedSeatsElement.length;
       if (selectedSeatsElement.length > 4) {
         alert("You can'n select more then 4 seats");
-        this.disabled = true;
-        selectedSeatsElement.classList.remove("selected");
+        for (const seats of mySeat) {
+          seats.disabled = true;
+        }
       }
       // how many seats are available now
       availableSeats.innerText = mySeat.length - selectedSeats;
@@ -35,7 +38,8 @@ function seat(elementName) {
       if (selectedSeatsElement.length <= 4) {
         seatsForBuy.appendChild(div);
       }
-
+      const countN = seatsForBuy.children.length;
+      countSelectedSeats.innerText = countN;
       totalPriceOfTicket.innerText = selectedSeats * ticketPrice;
       netPriceOfTicket.innerText = selectedSeats * ticketPrice;
     });
@@ -62,7 +66,17 @@ function valid() {
   }
 }
 
-if(parseInt(availableSeats.innerText) > 0 &&  parseInt(userPhone.value.length) >10
-){
-  modalBtn.disabled = true;
-}
+userPhone.addEventListener("keyup", function (e) {
+  const phoneNumberStringValue = e.target.value.toString();
+
+  console.log(phoneNumberStringValue.length, "phone number length");
+  console.log(parseFloat(countSelectedSeats.innerText), "selected seats");
+  // console.log(modalBtn.attributes);
+  if (
+    phoneNumberStringValue.length < 1 &&
+    parseFloat(countSelectedSeats.innerText) < 1
+  ) {
+    console.log("true  ");
+    modalBtn.style.color = "red";
+  }
+});
