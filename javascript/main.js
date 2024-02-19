@@ -5,8 +5,6 @@ const netPriceOfTicket = document.getElementById("net-price");
 const couponBox = document.getElementById("coupon-box");
 const couponCode = document.getElementById("coupon-code");
 const couponApplyBtn = document.getElementById("coupon-apply-btn");
-const modalBtn = document.getElementById("enable-desable");
-const userPhone = document.getElementById("phone");
 const countSelectedSeats = document.getElementById("count-seat");
 
 const ticketPrice = 550;
