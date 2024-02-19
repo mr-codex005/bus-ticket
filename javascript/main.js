@@ -15,7 +15,6 @@ function seat(elementName) {
     seat.addEventListener("click", function () {
       this.classList.add("selected");
 
-      // how many seats I have selected
       const selectedSeatsElement = document.getElementsByClassName("selected");
 
       const div = document.createElement("div");
@@ -27,7 +26,6 @@ function seat(elementName) {
       if (selectedSeatsElement.length <= 4) {
         seatsForBuy.appendChild(div);
       }
-      const countNumberOfSeatBuy = seatsForBuy.children.length;
       // how many seats are available now
       availableSeats.innerText = mySeat.length - selectedSeatsElement.length;
 
@@ -38,7 +36,13 @@ function seat(elementName) {
       if (selectedSeatsElement.length > 4) {
         alert("You can'n select more then 4 seats");
         seat.classList.remove("selected");
-        seat.disabled = true;
+      }
+      if (parseFloat(countSelectedSeats.innerText) === 5) {
+        const counted = parseFloat(countSelectedSeats.innerText) - 1;
+        countSelectedSeats.innerText = counted;
+        totalPriceOfTicket.innerText = counted * ticketPrice;
+        netPriceOfTicket.innerText = counted * ticketPrice;
+        availableSeats.innerText = mySeat.length - counted;
       }
     });
   }
