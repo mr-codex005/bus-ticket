@@ -83,7 +83,3 @@ function modalFnc() {
     alert("Please select minimum 1 seat and provide your phone number")
   }
 }
-
-function clearBase (){
-  const seat = document.getElementById
-}
