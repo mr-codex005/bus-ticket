@@ -78,7 +78,6 @@ function modalFnc() {
   const valueLength = phone.value.length;
   console.log(valueLength);
   if (parseFloat(countSelectedSeats.innerText) > 0 && valueLength === 11) {
-    console.log("jello");
     my_modal_5.showModal();
   }else{
     alert("Please select minimum 1 seat and provide your pone number")
