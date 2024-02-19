@@ -6,7 +6,7 @@ const couponBox = document.getElementById("coupon-box");
 const couponCode = document.getElementById("coupon-code");
 const couponApplyBtn = document.getElementById("coupon-apply-btn");
 const countSelectedSeats = document.getElementById("count-seat");
-
+const phone = document.getElementById("phone");
 const ticketPrice = 550;
 
 function seat(elementName) {
@@ -37,6 +37,7 @@ function seat(elementName) {
         alert("You can'n select more then 4 seats");
         seat.classList.remove("selected");
       }
+
       if (parseFloat(countSelectedSeats.innerText) === 5) {
         const counted = parseFloat(countSelectedSeats.innerText) - 1;
         countSelectedSeats.innerText = counted;
@@ -70,5 +71,16 @@ function valid() {
     }
   } else {
     alert("You are not able to get discount. To get discount buy 4 ticket");
+  }
+}
+
+function modalFnc() {
+  const valueLength = phone.value.length;
+  console.log(valueLength);
+  if (parseFloat(countSelectedSeats.innerText) > 0 && valueLength === 11) {
+    console.log("jello");
+    my_modal_5.showModal();
+  }else{
+    alert("Please select minimum 1 seat and provide your pone number")
   }
 }
