@@ -4,7 +4,7 @@ const totalPriceOfTicket = document.getElementById("gross-price");
 const netPriceOfTicket = document.getElementById("net-price");
 const couponBox = document.getElementById("coupon-box");
 const couponCode = document.getElementById("coupon-code");
-const validatorBtn = document.getElementById("validator-btn");
+const couponApplyBtn = document.getElementById("coupon-apply-btn");
 const modalBtn = document.getElementById("enable-desable");
 console.log(modalBtn);
 const userPhone = document.getElementById("phone");
@@ -20,15 +20,11 @@ function seat(elementName) {
 
       // how many seats I have selected
       const selectedSeatsElement = document.getElementsByClassName("selected");
-      const selectedSeats = selectedSeatsElement.length;
       if (selectedSeatsElement.length > 4) {
         alert("You can'n select more then 4 seats");
-        for (const seats of mySeat) {
-          seats.disabled = true;
-        }
+        seat.disabled = true;
       }
-      // how many seats are available now
-      availableSeats.innerText = mySeat.length - selectedSeats;
+
       const div = document.createElement("div");
       div.innerHTML = `<section class="flex justify-between mb-3">
       <h4 class="text-base text-[#03071299] font-normal">${this.innerText}</h4>
@@ -38,10 +34,13 @@ function seat(elementName) {
       if (selectedSeatsElement.length <= 4) {
         seatsForBuy.appendChild(div);
       }
-      const countN = seatsForBuy.children.length;
-      countSelectedSeats.innerText = countN;
-      totalPriceOfTicket.innerText = selectedSeats * ticketPrice;
-      netPriceOfTicket.innerText = selectedSeats * ticketPrice;
+      const countNumberOfSeatBuy = seatsForBuy.children.length;
+      // how many seats are available now
+      availableSeats.innerText = mySeat.length - countNumberOfSeatBuy;
+
+      countSelectedSeats.innerText = countNumberOfSeatBuy;
+      totalPriceOfTicket.innerText = countNumberOfSeatBuy * ticketPrice;
+      netPriceOfTicket.innerText = countNumberOfSeatBuy * ticketPrice;
     });
   }
 }
@@ -50,19 +49,22 @@ seat("btn-active");
 
 function valid() {
   const totalPrice = parseFloat(totalPriceOfTicket.innerText);
-
-  if (couponCode.value === "new15") {
-    couponBox.classList.add("hidden");
-    const discount = 15 / 100;
-    const discountPrice = totalPrice * discount;
-    const netPrice = totalPrice - discountPrice;
-    netPriceOfTicket.innerText = netPrice;
-  } else if (couponCode.value === "couple20") {
-    couponBox.classList.add("hidden");
-    const discount = 20 / 100;
-    const discountPrice = totalPrice * discount;
-    const netPrice = totalPrice - discountPrice;
-    netPriceOfTicket.innerText = netPrice;
+  if (parseFloat(countSelectedSeats.innerText) === 4) {
+    if (couponCode.value === "NEW15") {
+      couponBox.classList.add("hidden");
+      const discount = 15 / 100;
+      const discountPrice = totalPrice * discount;
+      const netPrice = totalPrice - discountPrice;
+      netPriceOfTicket.innerText = netPrice;
+    } else if (couponCode.value === "Couple20") {
+      couponBox.classList.add("hidden");
+      const discount = 20 / 100;
+      const discountPrice = totalPrice * discount;
+      const netPrice = totalPrice - discountPrice;
+      netPriceOfTicket.innerText = netPrice;
+    }
+  } else {
+    alert("You are not able to get discount. To get discount buy 4 ticket");
   }
 }
 
